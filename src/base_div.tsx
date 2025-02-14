@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react"
 
+import FirstMap from "./maps/first"
+
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window
   return {
@@ -27,11 +29,8 @@ export default function BaseDiv() {
 
   return (
       <div style={{display: "grid", gridTemplateColumns: `repeat(${width}, 1fr)`, gridTemplateRows: `repeat(${height}, 1fr)`}}>
-        {Array.from({length: width*height}).map((_ , i) => (
-          <div key={i} >
-            <img src={"/wall.png"} alt="sprite" style={{display:"block"}} width={gridDimention} height={gridDimention}/>
-          </div>
-        )) }
+        <FirstMap widthSeter={setWidth} heightSeter={setHeight} gridDimention={gridDimention}>
+        </FirstMap>
       </div>
   )
 }
