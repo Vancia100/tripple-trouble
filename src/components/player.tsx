@@ -9,6 +9,11 @@ export default function Player(props: {
   color: string
 }) {
   return (
-    <svg
+    <img 
+    src="/player.svg" 
+    alt="player" 
+    width={props.gridDimention} 
+    height={props.gridDimention} 
+    style={{position: "absolute", top: `${props.position.y*props.gridDimention}px`, left:`${props.position.x*props.gridDimention}px`}}/>
   )
 }

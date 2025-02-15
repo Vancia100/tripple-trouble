@@ -1,4 +1,4 @@
-export type Player = {
+export type PlayerType = {
   kill (): void,
   postion: { x: number, y: number },
 
@@ -7,7 +7,7 @@ export type Player = {
 import {createContext} from 'react';
 
 export const PlayerContext = createContext<{
-  "1": Player,
-  "2": Player,
-  "3": Player,
+  "1": PlayerType,
+  "2": PlayerType,
+  "3": PlayerType,
 } | null>(null);

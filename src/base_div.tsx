@@ -1,9 +1,11 @@
 import { useState, useEffect, ReactElement } from "react"
 
+
 import FirstMap from "./maps/first"
-import type { MapProps } from "./types/mapprops"
+import type { MapProps } from "./types/mapProps"
 
 import { PlayerContext } from "./context/playercontext"
+import PlayerHandler from "./components/playerHandler"
 
 const definedMaps = {
   "first": FirstMap
@@ -35,7 +37,7 @@ export default function BaseDiv() {
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions())
   const [gridDimention, setGridDiemntion] = useState(10)
 
-const [map, setMap] = useState<keyof typeof definedMaps>("first")
+  const [map, setMap] = useState<keyof typeof definedMaps>("first")
 
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -51,8 +53,13 @@ const [map, setMap] = useState<keyof typeof definedMaps>("first")
 
   return (
     <PlayerContext.Provider value={null}>
-      <div style={{display: "grid", gridTemplateColumns: `repeat(${dimentions.width}, 1fr)`, gridTemplateRows: `repeat(${dimentions.height}, 1fr)`}}>
+      <div style={{
+        display: "grid", 
+        gridTemplateColumns: `repeat(${dimentions.width}, 1fr)`,
+        gridTemplateRows: `repeat(${dimentions.height}, 1fr)`,
+        position : "relative"}}>
         {maps[map]({dimentionSeter: setDimentions, gridDimention})}
+        <PlayerHandler gridDimention={gridDimention}/>
       </div>
     </PlayerContext.Provider>
   )
