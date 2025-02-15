@@ -1,4 +1,8 @@
 export type MapProps = {
-  dimentionSeter: (dimention: {width: number, height: number}) => void,
-  gridDimention: number,
-}
+  mapElements : number[][],
+  startingPositions: {
+    "1": { x: number, y: number },
+    "2": { x: number, y: number },
+    "3": { x: number, y: number }
+  }
+} 

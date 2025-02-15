@@ -2,12 +2,24 @@ import Wall from "../components/blocks/wall.tsx";
 import GrassBlock from "./blocks/basic.tsx";
 import Spike from "./blocks/spike.tsx";
 import Goal from "./blocks/goal.tsx";
+import { useEffect, useContext } from "react";
+import { MapProps } from "../types/mapProps.ts";
+import { PlayerContext } from "../context/playerContext.tsx";
 
-export default function BlocksBuilder(props: { numberMap: number[][], gridDimention: number }) {
-  console.log(props.numberMap);
+export default function BlocksBuilder(props: { numberMap: MapProps, gridDimention: number, dimentionSeter: (dimention: { width: number, height: number }) => void }) {
+  const theMap = props.numberMap.mapElements
+
+  const players = useContext(PlayerContext);
+
+  useEffect(() => {
+    props.dimentionSeter({ width: theMap[0].length, height: theMap.length })
+    players?.[1].setPosition(props.numberMap.startingPositions["1"])
+    players?.[2].setPosition(props.numberMap.startingPositions["2"])
+    players?.[3].setPosition(props.numberMap.startingPositions["3"])
+  }, [])
 
   return (
-    props.numberMap.map((row, y) => (row.map((elem, x) => (<MapElement type={elem} gridDimention={props.gridDimention} position={{ x: x, y: y }} ></MapElement >))))
+    theMap.map((row, y) => (row.map((elem, x) => (<MapElement type={elem} gridDimention={props.gridDimention} position={{ x: x, y: y }} ></MapElement >))))
   )
 }
 

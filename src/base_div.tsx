@@ -19,6 +19,8 @@ function getWindowDimensions() {
   }
 }
 
+
+
 export default function BaseDiv(props: { setPage: (page: string) => void }) {
   const [dimentions, setDimentions] = useState({ width: 20, height: 20 })
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions())
@@ -46,7 +48,7 @@ export default function BaseDiv(props: { setPage: (page: string) => void }) {
         gridTemplateColumns: `repeat(${dimentions.width}, 1fr)`,
         gridTemplateRows: `repeat(${dimentions.height}, 1fr)`,
         position : "relative"}}>
-        <BlocksBuilder numberMap={maps[map]({ dimentionSeter: setDimentions, gridDimention })} gridDimention={gridDimention}>
+        <BlocksBuilder numberMap={maps[map]()} gridDimention={gridDimention} dimentionSeter={setDimentions}>
         </BlocksBuilder>
         <PlayerHandler gridDimention={gridDimention}/>
       </div>
