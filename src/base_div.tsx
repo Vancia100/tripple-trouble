@@ -1,5 +1,6 @@
 import { useState, useEffect, ReactElement } from "react"
 
+import BlocksBuilder from "./components/blockBuilder"
 
 import FirstMap from "./maps/first"
 import type { MapProps } from "./types/mapProps"
@@ -9,9 +10,9 @@ import PlayerHandler from "./components/playerHandler"
 
 const definedMaps = {
   "first": FirstMap
-  } as const
+} as const
 
-const maps = new Proxy<Record<string | symbol, (props:MapProps) => ReactElement>>(
+const maps = new Proxy<Record<string | symbol, (props: MapProps) => ReactElement>>(
   definedMaps,
   {
     get: (target, symbol) => {
@@ -22,7 +23,7 @@ const maps = new Proxy<Record<string | symbol, (props:MapProps) => ReactElement>
       }
     }
   }
-) 
+)
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window
@@ -33,23 +34,24 @@ function getWindowDimensions() {
 }
 
 export default function BaseDiv() {
-  const [dimentions, setDimentions] = useState({width: 20, height: 20})
+  const [dimentions, setDimentions] = useState({ width: 20, height: 20 })
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions())
   const [gridDimention, setGridDiemntion] = useState(10)
 
+  const [map, setMap] = useState<keyof typeof definedMaps>("first")
   const [map, setMap] = useState<keyof typeof definedMaps>("first")
 
   useEffect(() => {
     window.addEventListener("resize", () => {
       setWindowDimensions(getWindowDimensions())
-    return () => window.removeEventListener("resize", () => {})
+      return () => window.removeEventListener("resize", () => { })
     })
   }, [])
   useEffect(() => {
     const optiomalWidth = Math.floor(windowDimensions.width / dimentions.width)
     const optimalHeight = Math.floor(windowDimensions.height / dimentions.height)
     setGridDiemntion(Math.min(optiomalWidth, optimalHeight))
-  }, [windowDimensions , dimentions])
+  }, [windowDimensions, dimentions])
 
   return (
     <PlayerContext.Provider value={null}>
@@ -59,8 +61,10 @@ export default function BaseDiv() {
         gridTemplateRows: `repeat(${dimentions.height}, 1fr)`,
         position : "relative"}}>
         {maps[map]({dimentionSeter: setDimentions, gridDimention})}
+        <BlocksBuilder numberMap={maps[map]({ dimentionSeter: setDimentions, gridDimention })} gridDimention={gridDimention}>
+        </BlocksBuilder>
         <PlayerHandler gridDimention={gridDimention}/>
       </div>
-    </PlayerContext.Provider>
+    </PlayerContext.Provider >
   )
 }
