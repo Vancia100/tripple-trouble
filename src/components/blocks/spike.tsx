@@ -1,5 +1,5 @@
 import { useContext, useState, useEffect } from "react";
-import {PlayerContext } from "@/context/playercontext";
+import {PlayerContext } from "@/context/playerContext";
 
 export default function Spike(props: {
   position: {

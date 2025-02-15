@@ -1,14 +1,17 @@
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, useContext } from "react"
+import { PlayerContext } from "../context/playerContext"
 
 import Player from "./player"
 
 export default function PlayerHandler(props: {
   gridDimention: number
 }) {
+  const players = useContext(PlayerContext)
 
   const [player1Position, setPlayer1Position] = useState({x: 0, y: 0})
   const [player2Position, setPlayer2Position] = useState({x: 0, y: 0})
   const [player3Position, setPlayer3Position] = useState({x: 0, y: 0})
+
 
   const playersRef = useRef({
     player1: 0,
@@ -38,12 +41,16 @@ export default function PlayerHandler(props: {
       switch (gubbe) {
         case 0:
           setPlayer1Position((prev) => { return {x: prev.x + direction.x, y: prev.y + direction.y}})
+          players!["1"].setPosition(player1Position.x, player1Position.y)
+          console.log("moving player 1")
           break
         case 1:
           setPlayer2Position((prev) => { return {x: prev.x + direction.x, y: prev.y + direction.y}})
+          players!["2"].setPosition(player2Position.x, player2Position.y)
           break
         case 2:
           setPlayer3Position((prev) => { return {x: prev.x + direction.x, y: prev.y + direction.y}})
+          players!["3"].setPosition(player3Position.x, player3Position.y)
           break
       }
     }
@@ -91,9 +98,9 @@ export default function PlayerHandler(props: {
 
   return (
     <>
-    <Player id={1} gridDimention={props.gridDimention} position={player1Position} color="#ffffff"></Player>
-    <Player id={2} gridDimention={props.gridDimention} position={player2Position} color="#ffffff"></Player>
-    <Player id={3} gridDimention={props.gridDimention} position={player3Position} color="#ffffff"></Player>
+      <Player id={1} gridDimention={props.gridDimention} position={players!["1"].position} color="#ffffff"></Player>
+      <Player id={2} gridDimention={props.gridDimention} position={players!["2"].position} color="#ffffff"></Player>
+      <Player id={3} gridDimention={props.gridDimention} position={players!["3"].position} color="#ffffff"></Player>
     </>
   )
 }

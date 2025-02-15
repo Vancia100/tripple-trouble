@@ -4,7 +4,7 @@ import BlocksBuilder from "./components/blockBuilder"
 
 import FirstMap from "./maps/first"
 
-import { PlayerContext } from "./context/playercontext"
+import {PlayerProvider } from "./context/playerContext"
 import PlayerHandler from "./components/playerHandler"
 
 const maps = {
@@ -19,12 +19,13 @@ function getWindowDimensions() {
   }
 }
 
-export default function BaseDiv() {
+export default function BaseDiv(props: { setPage: (page: string) => void }) {
   const [dimentions, setDimentions] = useState({ width: 20, height: 20 })
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions())
   const [gridDimention, setGridDiemntion] = useState(10)
 
   const [map, setMap] = useState<keyof typeof maps>("first")
+  const [deadstate, setDeadState] = useState(false)
 
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -39,7 +40,7 @@ export default function BaseDiv() {
   }, [windowDimensions, dimentions])
 
   return (
-    <PlayerContext.Provider value={null}>
+    <PlayerProvider killFunction={() => setDeadState(true)}>
       <div style={{
         display: "grid", 
         gridTemplateColumns: `repeat(${dimentions.width}, 1fr)`,
@@ -49,6 +50,23 @@ export default function BaseDiv() {
         </BlocksBuilder>
         <PlayerHandler gridDimention={gridDimention}/>
       </div>
-    </PlayerContext.Provider >
+      {deadstate && (<div style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "rgba(0, 0, 0, 0.56)"
+      }}>
+        <h1>You died</h1>
+        <div style={{display: "flex", flexDirection: "row"}}>
+          <button onClick={() => (props.setPage("Main"))}>Main menue</button>
+          <button onClick={() => (setMap("first"))}>Restart</button>
+        </div>
+      </div>)}
+    </PlayerProvider>
   )
 }
