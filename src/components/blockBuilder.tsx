@@ -2,6 +2,8 @@ import Wall from "../components/blocks/wall.tsx";
 import GrassBlock from "./blocks/basic.tsx";
 import Spike from "./blocks/spike.tsx";
 import Goal from "./blocks/goal.tsx";
+import Door from "./blocks/door.tsx";
+import Button from "./blocks/button.tsx";
 import { useEffect, useContext } from "react";
 import { MapProps } from "../types/mapProps.ts";
 import { PlayerContext } from "../context/playerContext.tsx";
@@ -37,6 +39,12 @@ function MapElement(props: { type: number, gridDimention: number, position: { x:
     }
     case 3: {
       return (<Goal width={props.gridDimention}></Goal>);
+    }
+    case 4: {
+      return (<Door width={props.gridDimention} position={props.position}></Door>);
+    }
+    case 5: {
+      return (<Button width={props.gridDimention} position={props.position}></Button>);
     }
     default: {
       return (<div> OJ OJ OJ </div>)

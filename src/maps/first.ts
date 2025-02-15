@@ -1,14 +1,25 @@
 import { MapProps } from '../types/mapProps'
 //const width = 20
 //const height = 20
+//
+// 0 - Grass
+// 1 - Wall
+// 2 - Spikes
+// 3 - Goal
+// 4 - Door
+// 5 - Button
 const mapElements: number[][] =
   [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    [1, 0, 0, 0, 2, 0, 2, 0, 5, 1],
     [1, 0, 0, 0, 2, 0, 2, 0, 0, 1],
-    [1, 0, 0, 0, 2, 0, 2, 0, 3, 1],
     [1, 0, 0, 0, 2, 0, 2, 0, 0, 1],
     [1, 0, 0, 0, 2, 0, 2, 0, 0, 1],
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]];
+    [1, 1, 1, 1, 1, 1, 1, 1, 4, 1],
+    [1, 3, 0, 0, 2, 0, 2, 0, 0, 1],
+    [1, 0, 0, 0, 2, 0, 2, 0, 5, 1],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+  ];
 
 const startingPositions = {
   "1": { x: 1, y: 1 },
@@ -19,6 +30,6 @@ const startingPositions = {
 export default function FirstMap() {
 
   return (
-    {mapElements, startingPositions} satisfies MapProps
+    { mapElements, startingPositions } satisfies MapProps
   )
 }
