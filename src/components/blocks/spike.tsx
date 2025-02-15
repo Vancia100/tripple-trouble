@@ -1,11 +1,12 @@
 import { useContext, useState, useEffect } from "react";
-import {PlayerContext } from "@/context/playercontext";
+import { PlayerContext } from "../../context/playercontext";
 
 export default function Spike(props: {
   position: {
     x: number;
     y: number;
   },
+  width: number;
   spikeFrequenzy?: number;
   startState?: boolean;
 }) {
@@ -27,5 +28,6 @@ export default function Spike(props: {
       }
     }
   }
-  return <div style={{ width: "100%", height: "100%", background: isDeadly ? "red" : "black" }}></div>;
+  return (
+    <img src={isDeadly ? "/spikes_down.png" : "/spikes_up.png"} style={{ display: "block" }} width={props.width} height={props.width}></img>)
 }
