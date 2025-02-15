@@ -14,6 +14,6 @@ export default function Player(props: {
     alt="player" 
     width={props.gridDimention} 
     height={props.gridDimention} 
-    style={{position: "absolute", top: `${props.position.y*props.gridDimention}px`, left:`${props.position.x*props.gridDimention}px`}}/>
+    style={{position: "absolute", top: `${props.position.y*props.gridDimention}px`, left:`${props.position.x*props.gridDimention}px`, transition: "left 0.1s ease, top 0.1s ease"}}/>
   )
 }
