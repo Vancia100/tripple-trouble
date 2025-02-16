@@ -3,13 +3,15 @@ import { useState, useEffect } from "react"
 import BlocksBuilder from "./components/blockBuilder"
 
 import FirstMap from "./maps/first"
+import SecondMap from "./maps/second"
 
-import {PlayerProvider } from "./context/playerContext"
+import { PlayerProvider } from "./context/playerContext"
 import { BlockProvider } from "./context/blockContext"
 import PlayerHandler from "./components/playerHandler"
 
 const maps = {
-  "first": FirstMap
+  "first": FirstMap,
+  "second": SecondMap
 } as const
 
 function getWindowDimensions() {
@@ -46,13 +48,14 @@ export default function BaseDiv(props: { setPage: (page: string) => void }) {
     <PlayerProvider killFunction={() => setDeadState(true)}>
       <BlockProvider>
         <div style={{
-          display: "grid", 
+          display: "grid",
           gridTemplateColumns: `repeat(${dimentions.width}, 1fr)`,
           gridTemplateRows: `repeat(${dimentions.height}, 1fr)`,
-          position : "relative"}}>
+          position: "relative"
+        }}>
 
-          <BlocksBuilder numberMap={maps[map]()} gridDimention={gridDimention} dimentionSeter={setDimentions}/>
-          <PlayerHandler gridDimention={gridDimention}/>
+          <BlocksBuilder numberMap={maps[map]()} gridDimention={gridDimention} dimentionSeter={setDimentions} />
+          <PlayerHandler gridDimention={gridDimention} />
         </div>
       </BlockProvider>
       {deadstate && (<div style={{
@@ -67,15 +70,15 @@ export default function BaseDiv(props: { setPage: (page: string) => void }) {
         backgroundColor: "rgba(0, 0, 0, 0.56)"
       }}>
         <h1>You died</h1>
-        <div style={{display: "flex", flexDirection: "row"}}>
+        <div style={{ display: "flex", flexDirection: "row" }}>
           <button onClick={() => location.reload()}>
-              Main menue
+            Main menue
           </button>
           <button onClick={() => {
             setMap("first")
             setDeadState(false)
           }
-            }>Restart</button>
+          }>Restart</button>
         </div>
       </div>)}
     </PlayerProvider>
