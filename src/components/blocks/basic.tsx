@@ -1,6 +1,8 @@
 import { useEffect, useContext } from "react"
 import { BlockContext } from "../../context/blockContext"
 
+import picture from "../../assets/Grassblock.png"
+
 export default function GrassBlock(props: {width: number, position: {x: number, y: number}}, ) {
 
   const blocks = useContext(BlockContext)
@@ -14,5 +16,5 @@ export default function GrassBlock(props: {width: number, position: {x: number, 
       return prev
     })
   }, [])
-  return <img src={"/Grassblock.png"} alt="sprite" style={{display:"block"}} width={props.width} height={props.width}/>
+  return <img src={picture} alt="sprite" style={{display:"block"}} width={props.width} height={props.width}/>
 }

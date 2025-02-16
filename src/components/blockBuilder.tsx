@@ -4,6 +4,8 @@ import Spike from "./blocks/spike.tsx";
 import Goal from "./blocks/goal.tsx";
 import Door from "./blocks/door.tsx";
 import Button from "./blocks/button.tsx";
+import Treadmill from "./blocks/treadmill.tsx";
+import Lava from "./blocks/lava.tsx";
 
 import { useEffect, useContext } from "react";
 import { MapProps } from "../types/mapProps.ts";
@@ -48,6 +50,12 @@ function MapElement(props: { type: number | {block:number, kwargs?: Record<strin
     }
     case 5: {
       return (<Button width={props.gridDimention} position={props.position} activates={kwargs?.activates as {x: number, y: number}}></Button>);
+    }
+    case 6: {
+      return (<Treadmill width={props.gridDimention} position={props.position} direction={kwargs?.direction as {x: number, y: number}}></Treadmill>);
+    }
+    case 7: {
+      return (<Lava width={props.gridDimention} position={props.position}></Lava>);
     }
     default: {
       return (<div> OJ OJ OJ </div>)

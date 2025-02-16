@@ -2,6 +2,10 @@ import { BlockContext } from "../../context/blockContext";
 import { PlayerContext } from "../../context/playerContext";
 import { useContext, useEffect, useState } from "react";
 
+
+import opend from "../../assets/button_unpressed.png"
+import closed from "../../assets/button_pressed.png"
+
 export default function Button(props: {
   position: {
     x: number;
@@ -47,6 +51,6 @@ export default function Button(props: {
   }, [players, x, y])
   return (
     <>
-    <img src={pressed ? "/button_unpressed.png" : "/button_pressed.png"} style={{ display: "block" }} width={props.width} height={props.width}></img>
+    <img src={pressed ? closed : opend} style={{ display: "block" }} width={props.width} height={props.width}></img>
     </>)
 }

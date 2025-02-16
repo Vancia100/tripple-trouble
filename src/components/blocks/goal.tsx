@@ -1,6 +1,9 @@
 import { useContext, useEffect } from "react"
 import { PlayerContext } from "../../context/playerContext"
 import { BlockContext } from "../../context/blockContext"
+
+import icon from "../../assets/goal.png"
+
 export default function Goal(props: {
   width: number,
   position: { x: number, y: number }
@@ -31,6 +34,6 @@ export default function Goal(props: {
     }
   }, [players])
   return (
-    <img src={"/goal.png"} style={{ display: "block" }} width={props.width} height={props.width}></img>
+    <img src={icon} style={{ display: "block" }} width={props.width} height={props.width}></img>
   )
 }

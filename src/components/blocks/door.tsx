@@ -1,6 +1,9 @@
 import { useEffect, useState, useContext } from "react"
 import { BlockContext } from "../../context/blockContext"
 
+import closed from "../../assets/door_closed.png"
+import opened from "../../assets/door_open.png"
+
 export default function Door(props: {
   position: {
     x: number;
@@ -31,5 +34,5 @@ export default function Door(props: {
   // }, [])
 
   return (
-    <img src={!isOpen ? "/door_closed.png" : "/door_open.png"} style={{ display: "block" }} width={props.width} height={props.width}></img>)
+    <img src={!isOpen ? closed : opened} style={{ display: "block" }} width={props.width} height={props.width}></img>)
 }

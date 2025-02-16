@@ -4,13 +4,14 @@ import BlocksBuilder from "./components/blockBuilder"
 
 import FirstMap from "./maps/first"
 import SecondMap from "./maps/second"
+import ThirdMap from "./maps/third"
 
 import { PlayerProvider } from "./context/playerContext"
 import { BlockProvider } from "./context/blockContext"
 import PlayerHandler from "./components/playerHandler"
 
 const maps = [
-  FirstMap, SecondMap
+  FirstMap, SecondMap, ThirdMap
 ] as const
 
 function getWindowDimensions() {
@@ -48,7 +49,7 @@ export default function BaseDiv(props: { setPage: (page: string) => void }) {
       if (map === maps.length - 1) {
         props.setPage("Menu")
       } else {
-        setMap(map + 1)
+        setMap(prev => prev + 1)
       }}}>
       <BlockProvider>
         <div style={{

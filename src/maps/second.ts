@@ -1,4 +1,4 @@
-import { MapProps } from '../types/mapProps'
+import { MapProps, oneMapType } from '../types/mapProps'
 //const width = 20
 //const height = 20
 //
@@ -8,10 +8,7 @@ import { MapProps } from '../types/mapProps'
 // 3 - Goal
 // 4 - Door
 // 5 - Button
-const mapElements: (number | {
-  block: number;
-  kwargs: Record<string, any>;
-})[][] =
+const mapElements: oneMapType[][] =
   [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 0, 2, 4, { block: 5, kwargs: { activates: { x: 5, y: 3 } } }, 2, { block: 5, kwargs: { activates: { x: 5, y: 5 } } }, { block: 5, kwargs: { activates: { x: 13, y: 3 } } }, 2, 0, 0, 0, 0, 0, 0, 1],
