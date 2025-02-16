@@ -18,7 +18,7 @@ const mapElements: (number | {
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1],
     [1, 0, { block: 5, kwargs: { activates: { x: 3, y: 1 } } }, 2, { block: 5, kwargs: { activates: { x: 3, y: 5 } } }, 4, 2, 0, 0, 4, 0, 4, 0, 4, 3, 1],
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1],
-    [1, 0, 2, 4, { block: 5, kwargs: { activates: { x: 9, y: 3 } } }, 4, 2, { block: 5, kwargs: { activtes: { x: 11, y: 3 } } }, 2, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 2, 4, { block: 5, kwargs: { activates: { x: 9, y: 3 } } }, 4, 2, { block: 5, kwargs: { activates: { x: 11, y: 3 } } }, 2, 0, 0, 0, 0, 0, 0, 1],
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   ];
 
