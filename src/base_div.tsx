@@ -9,10 +9,9 @@ import { PlayerProvider } from "./context/playerContext"
 import { BlockProvider } from "./context/blockContext"
 import PlayerHandler from "./components/playerHandler"
 
-const maps = {
-  "first": FirstMap,
-  "second": SecondMap
-} as const
+const maps = [
+  FirstMap, SecondMap
+] as const
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window
@@ -29,7 +28,7 @@ export default function BaseDiv(props: { setPage: (page: string) => void }) {
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions())
   const [gridDimention, setGridDiemntion] = useState(10)
 
-  const [map, setMap] = useState<keyof typeof maps>("first")
+  const [map, setMap] = useState<number>(0)
   const [deadstate, setDeadState] = useState(false)
 
   useEffect(() => {
@@ -45,7 +44,12 @@ export default function BaseDiv(props: { setPage: (page: string) => void }) {
   }, [windowDimensions, dimentions])
 
   return (
-    <PlayerProvider killFunction={() => setDeadState(true)}>
+    <PlayerProvider killFunction={() => setDeadState(true)} winFunction={() => {
+      if (map === maps.length - 1) {
+        props.setPage("Menu")
+      } else {
+        setMap(map + 1)
+      }}}>
       <BlockProvider>
         <div style={{
           display: "grid",
@@ -75,7 +79,7 @@ export default function BaseDiv(props: { setPage: (page: string) => void }) {
             Main menue
           </button>
           <button onClick={() => {
-            setMap("first")
+            setMap(0)
             setDeadState(false)
           }
           }>Restart</button>
