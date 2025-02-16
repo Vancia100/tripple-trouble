@@ -32,22 +32,22 @@ function MapElement(props: { type: number | {block:number, kwargs?: Record<strin
   const kwargs = typeof props.type === "number" ? {} : props.type.kwargs
   switch (comparator) {
     case 0: {
-      return (<GrassBlock width={props.gridDimention} {...kwargs}></GrassBlock>);
+      return (<GrassBlock width={props.gridDimention}></GrassBlock>);
     }
     case 1: {
-      return (<Wall width={props.gridDimention} position = {props.position} {...kwargs}></Wall>);
+      return (<Wall width={props.gridDimention} position = {props.position}></Wall>);
     }
     case 2: {
-      return (<Spike width={props.gridDimention} position={props.position} {...kwargs}></Spike>);
+      return (<Spike width={props.gridDimention} position={props.position}></Spike>);
     }
     case 3: {
-      return (<Goal width={props.gridDimention} position = {props.position} {...kwargs}></Goal>);
+      return (<Goal width={props.gridDimention} position = {props.position}></Goal>);
     }
     case 4: {
-      return (<Door width={props.gridDimention} position={props.position} {...kwargs}></Door>);
+      return (<Door width={props.gridDimention} position={props.position}></Door>);
     }
     case 5: {
-      return (<Button width={props.gridDimention} position={props.position} {...kwargs}></Button>);
+      return (<Button width={props.gridDimention} position={props.position} activates={kwargs?.activates as {x: number, y: number}}></Button>);
     }
     default: {
       return (<div> OJ OJ OJ </div>)

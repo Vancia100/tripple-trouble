@@ -37,6 +37,7 @@ export default function PlayerHandler(props: {
       switch (gubbe) {
         case 0:
           players!["1"].setPosition((prev) => {
+            console.log(prev.x + direction.x, prev.y + direction.y, blocks.blocks?.[prev.x + direction.x]?.[prev.y + direction.y])
             if (blocks.blocks?.[prev.x + direction.x]?.[prev.y + direction.y]?.passable !== false) {
               return {x: prev.x + direction.x, y: prev.y + direction.y}
             } else {
@@ -108,9 +109,9 @@ export default function PlayerHandler(props: {
 
   return (
     <>
-      <Player id={1} gridDimention={props.gridDimention} position={players!["1"].position} color="#ffffff"></Player>
-      <Player id={2} gridDimention={props.gridDimention} position={players!["2"].position} color="#ffffff"></Player>
-      <Player id={3} gridDimention={props.gridDimention} position={players!["3"].position} color="#ffffff"></Player>
+      <Player id={1} gridDimention={props.gridDimention} position={players!["1"].position} color="#e2330f"></Player>
+      <Player id={2} gridDimention={props.gridDimention} position={players!["2"].position} color="#0d1a93"></Player>
+      <Player id={3} gridDimention={props.gridDimention} position={players!["3"].position} color="#0ba80e"></Player>
     </>
   )
 }
