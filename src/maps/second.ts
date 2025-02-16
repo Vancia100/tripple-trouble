@@ -24,8 +24,8 @@ const mapElements: (number | {
 
 const startingPositions = {
   "1": { x: 1, y: 1 },
-  "2": { x: 1, y: 2 },
-  "3": { x: 1, y: 3 }
+  "2": { x: 1, y: 3 },
+  "3": { x: 1, y: 5 }
 }
 
 export default function SecondMap() {

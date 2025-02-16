@@ -16,22 +16,25 @@ export default function Button(props: {
   const [pressed, setIsPressed] = useState(false)
 
   useEffect(() => {
-    blocks.blocks[props.activates.x]?.[props.activates.y]?.setIsOpen && console.log(pressed) && blocks.blocks[props.activates.x][props.activates.y].setIsOpen(pressed)
-    console.log(props.activates)
-  }, [pressed, blocks.blocks[props.activates.x]?.[props.activates.y]])
+    if (!props.activates) return
+    const targetBlock = blocks.blocks[props.activates.x]?.[props.activates.y]
+    if (targetBlock && targetBlock.setIsOpen) {
+      targetBlock.setIsOpen(pressed)
+    }
+  }, [pressed,blocks.blocks])
+
   useEffect(() => {
     if (players) {
       for (const player of Object.values(players)) {
         const stepedOn = player.position.x === x && player.position.y === y
         if (stepedOn) {
-          console.log("pressde!")
           setIsPressed(true)
           break
         }
         setIsPressed(false)
       }
     }
-  }, [players])
+  }, [players, x, y])
   return (
     <>
     <img src={pressed ? "/button_unpressed.png" : "/button_pressed.png"} style={{ display: "block" }} width={props.width} height={props.width}></img>

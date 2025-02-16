@@ -28,7 +28,7 @@ export default function BaseDiv(props: { setPage: (page: string) => void }) {
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions())
   const [gridDimention, setGridDiemntion] = useState(10)
 
-  const [map, setMap] = useState<number>(0)
+  const [map, setMap] = useState<number>(1)
   const [deadstate, setDeadState] = useState(false)
 
   useEffect(() => {

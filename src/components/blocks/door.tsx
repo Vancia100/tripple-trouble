@@ -21,14 +21,14 @@ export default function Door(props: {
       }
       return prev
     })
-  }, [isOpen])
+  }, [isOpen, blocks, props.position])
 
-  useEffect(() => {
-  const interval = setInterval(() => {
-      setIsOpen((prev) => !prev)
-    }, 2000)
-    return () => clearInterval(interval)
-  }, [])
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setIsOpen((prev) => !prev)
+  //   }, 2000)
+  //   return () => clearInterval(interval)
+  // }, [])
 
   return (
     <img src={!isOpen ? "/door_closed.png" : "/door_open.png"} style={{ display: "block" }} width={props.width} height={props.width}></img>)

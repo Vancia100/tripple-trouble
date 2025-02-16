@@ -2,11 +2,12 @@ import { createContext, ReactNode, useState, Dispatch, SetStateAction} from 'rea
 
 export type PlayerType = {
   kill (): void,
+  win ?(): void,
   setPosition: Dispatch<SetStateAction<{ x: number; y: number; }>>,
   position: Readonly<{ x: number, y: number }>,
 }
 
-export const PlayerProvider = ({children, killFunction}: {children:ReactNode, killFunction: () => void}) => {
+export const PlayerProvider = ({children, killFunction, winFunction}: {children:ReactNode, killFunction: () => void, winFunction: () => void}) => {
   const [player1Position, setPlayer1Position] = useState({x: 0, y: 0})
   const [player2Position, setPlayer2Position] = useState({x: 0, y: 0})
   const [player3Position, setPlayer3Position] = useState({x: 0, y: 0})
@@ -16,7 +17,8 @@ export const PlayerProvider = ({children, killFunction}: {children:ReactNode, ki
       "1": {
         position: player1Position,
         kill: killFunction,
-        setPosition: setPlayer1Position
+        setPosition: setPlayer1Position,
+        win: winFunction
       },
       "2": {
         position: player2Position,

@@ -21,7 +21,6 @@ export default function PlayerHandler(props: {
             this.player2 = 3 - this.player1 - this.player2
             break
           }
-      console.log("changing player", id, this.player1, this.player2)
     },
     move(id: string, direction: {x: number, y: number}) {
       switch (id) {
@@ -37,7 +36,6 @@ export default function PlayerHandler(props: {
       switch (gubbe) {
         case 0:
           players!["1"].setPosition((prev) => {
-            console.log(prev.x + direction.x, prev.y + direction.y, blocks.blocks?.[prev.x + direction.x]?.[prev.y + direction.y])
             if (blocks.blocks?.[prev.x + direction.x]?.[prev.y + direction.y]?.passable !== false) {
               return {x: prev.x + direction.x, y: prev.y + direction.y}
             } else {
