@@ -16,6 +16,16 @@ export default function Button(props: {
   const [pressed, setIsPressed] = useState(false)
 
   useEffect(() => {
+    blocks.setBlocks(prev => {
+      if (!prev[x]) prev[x] = {}
+      prev[x][y] = {
+        passable: true,
+      }
+      return prev
+    })
+  }, [])
+
+  useEffect(() => {
     if (!props.activates) return
     const targetBlock = blocks.blocks[props.activates.x]?.[props.activates.y]
     if (targetBlock && targetBlock.setIsOpen) {
