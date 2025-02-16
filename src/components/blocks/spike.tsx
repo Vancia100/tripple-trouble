@@ -16,9 +16,10 @@ export default function Spike(props: {
 
   useEffect(() => {
     const interval = props.spikeFrequenzy ?? 3000;
-    setInterval(() => {
+    const spikeInterval = setInterval(() => {
       setIsDead((prev) => !prev)
     }, interval)
+    return () => clearInterval(spikeInterval)
   }, [])
 
   if (players) {

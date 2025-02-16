@@ -8,9 +8,12 @@ import { MapProps } from '../types/mapProps'
 // 3 - Goal
 // 4 - Door
 // 5 - Button
-const mapElements: number[][] =
+const mapElements: (number | {
+  block: number;
+  kwargs: Record<string, any>;
+})[][] =
   [
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    [{block: 1, kwargs: {id: 1}}, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 0, 0, 0, 2, 0, 2, 0, 5, 1],
     [1, 0, 0, 0, 2, 0, 2, 0, 0, 1],
     [1, 0, 0, 0, 2, 0, 2, 0, 0, 1],

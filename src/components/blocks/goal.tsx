@@ -1,5 +1,6 @@
 export default function Goal(props: {
-  width: number;
+  width: number,
+  position: { x: number, y: number }
 }) {
 
   return (

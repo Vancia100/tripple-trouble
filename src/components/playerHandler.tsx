@@ -1,5 +1,6 @@
 import {useEffect, useRef, useContext } from "react"
 import { PlayerContext } from "../context/playerContext"
+import { BlockContext } from "../context/blockContext"
 
 import Player from "./player"
 
@@ -7,6 +8,7 @@ export default function PlayerHandler(props: {
   gridDimention: number
 }) {
   const players = useContext(PlayerContext)
+  const blocks = useContext(BlockContext)
   const playersRef = useRef({
     player1: 0,
     player2: 1,
@@ -34,13 +36,31 @@ export default function PlayerHandler(props: {
     movePlayerRaw(gubbe: number, direction: {x: number, y: number}) {
       switch (gubbe) {
         case 0:
-          players!["1"].setPosition((prev) => { return {x: prev.x + direction.x, y: prev.y + direction.y}})
+          players!["1"].setPosition((prev) => {
+            if (blocks.blocks?.[prev.x + direction.x]?.[prev.y + direction.y]?.passable !== false) {
+              return {x: prev.x + direction.x, y: prev.y + direction.y}
+            } else {
+              return prev
+            }
+           })
           break
         case 1:
-          players!["2"].setPosition((prev) => { return {x: prev.x + direction.x, y: prev.y + direction.y}})
+          players!["2"].setPosition((prev) => { 
+            if (blocks.blocks?.[prev.x + direction.x]?.[prev.y + direction.y]?.passable !== false) {
+              return {x: prev.x + direction.x, y: prev.y + direction.y}
+            } else {
+              return prev
+            }
+          })
           break
         case 2:
-          players!["3"].setPosition((prev) => { return {x: prev.x + direction.x, y: prev.y + direction.y}})
+          players!["3"].setPosition((prev) => { 
+            if (blocks.blocks?.[prev.x + direction.x]?.[prev.y + direction.y]?.passable !== false) {
+              return {x: prev.x + direction.x, y: prev.y + direction.y}
+            } else {
+              return prev
+            }
+          })
           break
       }
     }

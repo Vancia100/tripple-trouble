@@ -5,6 +5,7 @@ import BlocksBuilder from "./components/blockBuilder"
 import FirstMap from "./maps/first"
 
 import {PlayerProvider } from "./context/playerContext"
+import { BlockProvider } from "./context/blockContext"
 import PlayerHandler from "./components/playerHandler"
 
 const maps = {
@@ -43,15 +44,17 @@ export default function BaseDiv(props: { setPage: (page: string) => void }) {
 
   return (
     <PlayerProvider killFunction={() => setDeadState(true)}>
-      <div style={{
-        display: "grid", 
-        gridTemplateColumns: `repeat(${dimentions.width}, 1fr)`,
-        gridTemplateRows: `repeat(${dimentions.height}, 1fr)`,
-        position : "relative"}}>
-        <BlocksBuilder numberMap={maps[map]()} gridDimention={gridDimention} dimentionSeter={setDimentions}>
-        </BlocksBuilder>
-        <PlayerHandler gridDimention={gridDimention}/>
-      </div>
+      <BlockProvider>
+        <div style={{
+          display: "grid", 
+          gridTemplateColumns: `repeat(${dimentions.width}, 1fr)`,
+          gridTemplateRows: `repeat(${dimentions.height}, 1fr)`,
+          position : "relative"}}>
+
+          <BlocksBuilder numberMap={maps[map]()} gridDimention={gridDimention} dimentionSeter={setDimentions}/>
+          <PlayerHandler gridDimention={gridDimention}/>
+        </div>
+      </BlockProvider>
       {deadstate && (<div style={{
         position: "fixed",
         top: 0,
@@ -65,8 +68,14 @@ export default function BaseDiv(props: { setPage: (page: string) => void }) {
       }}>
         <h1>You died</h1>
         <div style={{display: "flex", flexDirection: "row"}}>
-          <button onClick={() => (props.setPage("Main"))}>Main menue</button>
-          <button onClick={() => (setMap("first"))}>Restart</button>
+          <button onClick={() => location.reload()}>
+              Main menue
+          </button>
+          <button onClick={() => {
+            setMap("first")
+            setDeadState(false)
+          }
+            }>Restart</button>
         </div>
       </div>)}
     </PlayerProvider>
