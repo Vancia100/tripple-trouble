@@ -6,9 +6,16 @@ import Player from "./player"
 
 export default function PlayerHandler(props: {
   gridDimention: number
+  deadState:boolean
 }) {
   const players = useContext(PlayerContext)
   const blocks = useContext(BlockContext)
+  const deadStateRef = useRef(props.deadState);
+
+  useEffect(() => {
+    deadStateRef.current = props.deadState;
+  }, [props.deadState]);
+
   const playersRef = useRef({
     player1: 0,
     player2: 1,
@@ -23,6 +30,7 @@ export default function PlayerHandler(props: {
           }
     },
     move(id: string, direction: {x: number, y: number}) {
+      if (deadStateRef.current) return
       switch (id) {
         case "1":
           this.movePlayerRaw(this.player1, direction)
@@ -66,7 +74,7 @@ export default function PlayerHandler(props: {
   })
 
   useEffect(() => {
-    document.addEventListener("keydown", (e) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
       if (e.repeat) return
       e.preventDefault()
       switch (e.key) {
@@ -101,8 +109,10 @@ export default function PlayerHandler(props: {
           playersRef.current.changePlayer("2")
           break
       }
-    })
-    return () => document.removeEventListener("keydown", () => {})
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
   }, [])
 
   return (

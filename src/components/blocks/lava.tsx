@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react";
 import { PlayerContext } from "../../context/playerContext";
 import { BlockContext } from "../../context/blockContext";
+import icon from "../../assets/lava.png"
 
 export default function Lava(props: {
   position: {
@@ -31,5 +32,5 @@ export default function Lava(props: {
    }
  }, [players])
   return (
-    <img src={"/lava.png"} style={{ display: "block" }} width={props.width} height={props.width}></img>)
+    <img src={icon} style={{ display: "block" }} width={props.width} height={props.width}></img>)
 }

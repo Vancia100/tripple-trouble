@@ -1,7 +1,7 @@
 import { useEffect, useContext, useRef, useCallback } from 'react';
 import { BlockContext } from '../../context/blockContext';
 import { PlayerContext } from '../../context/playerContext';
-
+import icon from '../../assets/treadmill.png';
 
 export default function Treadmill(props: {
   position: { x: number, y: number },
@@ -43,6 +43,6 @@ export default function Treadmill(props: {
   }, []);
 
   return (
-    <img src="/treadmill.png" style={{ display: "block" }} width={props.width} height={props.width}></img>
+    <img src={icon} style={{ display: "block" }} width={props.width} height={props.width}></img>
   )
 }

@@ -29,7 +29,7 @@ export default function BaseDiv(props: { setPage: (page: string) => void }) {
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions())
   const [gridDimention, setGridDiemntion] = useState(10)
 
-  const [map, setMap] = useState<number>(0)
+  const [map, setMap] = useState<number>(0) // Initial map
   const [deadstate, setDeadState] = useState(false)
 
   useEffect(() => {
@@ -59,8 +59,8 @@ export default function BaseDiv(props: { setPage: (page: string) => void }) {
           position: "relative"
         }}>
 
-          <BlocksBuilder numberMap={maps[map]()} gridDimention={gridDimention} dimentionSeter={setDimentions} />
-          <PlayerHandler gridDimention={gridDimention} />
+          <BlocksBuilder numberMap={maps[map]()} gridDimention={gridDimention} dimentionSeter={setDimentions} mapIndex={map}/>
+          <PlayerHandler gridDimention={gridDimention} deadState={deadstate}/>
         </div>
       </BlockProvider>
       {deadstate && (<div style={{

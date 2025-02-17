@@ -1,5 +1,7 @@
 import { useEffect, useState, useContext } from "react"
+
 import { BlockContext } from "../../context/blockContext"
+import { PlayerContext } from "../../context/playerContext"
 
 import closed from "../../assets/door_closed.png"
 import opened from "../../assets/door_open.png"
@@ -11,6 +13,7 @@ export default function Door(props: {
   }
   width: number;
 }) {
+  const players = useContext(PlayerContext)
   const blocks = useContext(BlockContext)
 
   const [isOpen, setIsOpen] = useState(false)
@@ -26,12 +29,15 @@ export default function Door(props: {
     })
   }, [isOpen, blocks, props.position])
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setIsOpen((prev) => !prev)
-  //   }, 2000)
-  //   return () => clearInterval(interval)
-  // }, [])
+  useEffect(() => {
+    if (players) {
+      for (const player of Object.values(players)) {
+        if (player.position.x === props.position.x && player.position.y === props.position.y && !isOpen) {
+          player.kill();
+        }
+      }
+    }
+  }, [players, isOpen])
 
   return (
     <img src={!isOpen ? closed : opened} style={{ display: "block" }} width={props.width} height={props.width}></img>)

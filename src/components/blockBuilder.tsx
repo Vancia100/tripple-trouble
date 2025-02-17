@@ -11,12 +11,16 @@ import { useEffect, useContext } from "react";
 import { MapProps } from "../types/mapProps.ts";
 import { PlayerContext } from "../context/playerContext.tsx";
 
-export default function BlocksBuilder(props: { numberMap: MapProps, gridDimention: number, dimentionSeter: (dimention: { width: number, height: number }) => void }) {
+export default function BlocksBuilder(props: { 
+  mapIndex: number,
+  numberMap: MapProps, 
+  gridDimention: number, 
+  dimentionSeter: (dimention: { width: number, height: number }) => void }) 
+  {
   const theMap = props.numberMap.mapElements
   const players = useContext(PlayerContext);
 
   useEffect(() => {
-    console.log("rerender")
     props.dimentionSeter({ width: theMap[0].length, height: theMap.length })
     players?.[1].setPosition(props.numberMap.startingPositions["1"])
     players?.[2].setPosition(props.numberMap.startingPositions["2"])
@@ -24,7 +28,16 @@ export default function BlocksBuilder(props: { numberMap: MapProps, gridDimentio
   }, [theMap])
 
   return (
-    theMap.map((row, y) => (row.map((elem, x) => (<MapElement type={elem} gridDimention={props.gridDimention} position={{ x: x, y: y }} ></MapElement >))))
+    theMap.map((row, y) => (
+      row.map((elem, x) => (
+        <MapElement 
+          key={`${props.mapIndex}-${x}-${y}`} 
+          type={elem} 
+          gridDimention={props.gridDimention} 
+          position={{ x: x, y: y }} 
+        />
+      ))
+    ))
   )
 }
 
@@ -40,7 +53,7 @@ function MapElement(props: { type: number | {block:number, kwargs?: Record<strin
       return (<Wall width={props.gridDimention} position = {props.position}></Wall>);
     }
     case 2: {
-      return (<Spike width={props.gridDimention} position={props.position}></Spike>);
+      return (<Spike width={props.gridDimention} position={props.position} kwargs={kwargs}></Spike>);
     }
     case 3: {
       return (<Goal width={props.gridDimention} position = {props.position}></Goal>);

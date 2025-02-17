@@ -11,12 +11,16 @@ export default function Spike(props: {
     y: number;
   },
   width: number;
+  kwargs?:{  
   spikeFrequenzy?: number;
   startState?: boolean;
+  delay?: number;
+  offset?: number;
+  }
 }) {
   const players = useContext(PlayerContext);
   const blocks = useContext(BlockContext);
-  const [isDeadly, setIsDead] = useState(props.startState ?? false);
+  const [isDeadly, setIsDead] = useState(props.kwargs?.startState ?? false);
 
   useEffect(() => {
     blocks.setBlocks(prev => {
@@ -27,12 +31,24 @@ export default function Spike(props: {
       return prev
     })
 
-    const interval = props.spikeFrequenzy ?? 3000;
+    const interval = props.kwargs?.spikeFrequenzy ?? 3000;
+
+    
     const spikeInterval = setInterval(() => {
-      setIsDead((prev) => !prev)
+      const revert = () => setIsDead(prev => !prev)
+      if (props.kwargs?.delay) {
+        setTimeout(() => {
+          revert()
+          setTimeout(revert, props.kwargs?.delay)
+        }, props.kwargs?.offset ?? 0)
+      } else {
+        revert()
+      }
     }, interval)
+
     return () => clearInterval(spikeInterval)
   }, [])
+
  useEffect(() => {
    if (players) {
      for (const player of Object.values(players)) {
