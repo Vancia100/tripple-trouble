@@ -31,13 +31,21 @@ export default function BaseDiv(props: { setPage: (page: string) => void }) {
 
   const [map, setMap] = useState<number>(0) // Initial map
   const [deadstate, setDeadState] = useState(false)
+  const [reseter, setReseter] = useState(false)
+  const reset = () => {
+    setReseter(prev => !prev)
+    setTimeout(() => setDeadState(false), 100)
+  }
 
+  // Window dimentions setup
   useEffect(() => {
     window.addEventListener("resize", () => {
       setWindowDimensions(getWindowDimensions())
       return () => window.removeEventListener("resize", () => { })
     })
   }, [])
+
+  //Window dimention listener
   useEffect(() => {
     const optiomalWidth = Math.floor(windowDimensions.width / dimentions.width)
     const optimalHeight = Math.floor(windowDimensions.height / dimentions.height)
@@ -59,8 +67,15 @@ export default function BaseDiv(props: { setPage: (page: string) => void }) {
           position: "relative"
         }}>
 
-          <BlocksBuilder numberMap={maps[map]()} gridDimention={gridDimention} dimentionSeter={setDimentions} mapIndex={map}/>
-          <PlayerHandler gridDimention={gridDimention} deadState={deadstate}/>
+          <BlocksBuilder 
+            numberMap={maps[map]()} 
+            gridDimention={gridDimention} 
+            dimentionSeter={setDimentions} 
+            mapIndex={map} 
+            reseter={reseter}/>
+          <PlayerHandler 
+            gridDimention={gridDimention} 
+            deadState={deadstate}/>
         </div>
       </BlockProvider>
       {deadstate && (<div style={{
@@ -70,20 +85,22 @@ export default function BaseDiv(props: { setPage: (page: string) => void }) {
         width: "100%",
         height: "100%",
         display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "rgba(0, 0, 0, 0.56)"
       }}>
         <h1>You died</h1>
         <div style={{ display: "flex", flexDirection: "row" }}>
-          <button onClick={() => location.reload()}>
-            Main menue
+          <button onClick={() => props.setPage("Menu")} style={{
+            marginRight: "10px"
+          }}>
+            Main menu
           </button>
           <button onClick={() => {
-            setMap(0)
-            setDeadState(false)
+            reset()
           }
-          }>Restart</button>
+          }>Restart Level</button>
         </div>
       </div>)}
     </PlayerProvider>

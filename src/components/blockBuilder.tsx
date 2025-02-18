@@ -15,6 +15,7 @@ export default function BlocksBuilder(props: {
   mapIndex: number,
   numberMap: MapProps, 
   gridDimention: number, 
+  reseter: boolean,
   dimentionSeter: (dimention: { width: number, height: number }) => void }) 
   {
   const theMap = props.numberMap.mapElements
@@ -25,7 +26,7 @@ export default function BlocksBuilder(props: {
     players?.[1].setPosition(props.numberMap.startingPositions["1"])
     players?.[2].setPosition(props.numberMap.startingPositions["2"])
     players?.[3].setPosition(props.numberMap.startingPositions["3"])
-  }, [theMap])
+  }, [theMap, props.reseter])
 
   return (
     theMap.map((row, y) => (

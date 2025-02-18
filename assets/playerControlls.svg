@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 1122.5197 793.70081"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="bitmap.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="playerControlls.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#000000"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.0286727"
+     inkscape:cx="530.78107"
+     inkscape:cy="469.05104"
+     inkscape:window-width="2560"
+     inkscape:window-height="1369"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g11" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="RoundedArrow"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Rounded arrow"
+       markerWidth="0.5"
+       markerHeight="0.5"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid"
+       markerUnits="strokeWidth">
+      <path
+         transform="scale(0.7)"
+         d="m -0.21114562,-4.1055728 6.42229122,3.21114561 a 1,1 90 0 1 0,1.78885438 L -0.21114562,4.1055728 A 1.236068,1.236068 31.717474 0 1 -2,3 v -6 a 1.236068,1.236068 148.28253 0 1 1.78885438,-1.1055728 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path8" />
+    </marker>
+    <rect
+       x="641.34162"
+       y="119.60712"
+       width="61.865751"
+       height="65.990135"
+       id="rect6" />
+    <rect
+       x="678.46107"
+       y="301.76739"
+       width="89.361641"
+       height="72.864107"
+       id="rect5" />
+    <rect
+       x="505.23697"
+       y="295.58081"
+       width="74.238901"
+       height="59.803559"
+       id="rect4" />
+    <rect
+       x="461.93094"
+       y="118.23232"
+       width="77.675888"
+       height="75.613696"
+       id="rect2" />
+    <rect
+       x="461.93094"
+       y="118.23232"
+       width="77.675888"
+       height="75.613693"
+       id="rect2-2" />
+    <rect
+       x="505.23697"
+       y="295.58081"
+       width="74.238899"
+       height="59.803558"
+       id="rect4-5" />
+    <rect
+       x="678.46106"
+       y="301.7674"
+       width="89.361641"
+       height="72.864105"
+       id="rect5-4" />
+    <rect
+       x="641.34161"
+       y="119.60712"
+       width="61.865749"
+       height="65.990135"
+       id="rect6-5" />
+    <rect
+       x="641.34161"
+       y="119.60712"
+       width="61.865749"
+       height="65.990135"
+       id="rect6-5-0" />
+    <marker
+       style="overflow:visible"
+       id="RoundedArrow-3"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Rounded arrow"
+       markerWidth="0.5"
+       markerHeight="0.5"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid"
+       markerUnits="strokeWidth">
+      <path
+         transform="scale(0.7)"
+         d="m -0.21114562,-4.1055728 6.42229122,3.21114561 a 1,1 90 0 1 0,1.78885438 L -0.21114562,4.1055728 A 1.236068,1.236068 31.717474 0 1 -2,3 v -6 a 1.236068,1.236068 148.28253 0 1 1.78885438,-1.1055728 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path8-0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="RoundedArrow-2"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Rounded arrow"
+       markerWidth="0.5"
+       markerHeight="0.5"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid"
+       markerUnits="strokeWidth">
+      <path
+         transform="scale(0.7)"
+         d="m -0.21114562,-4.1055728 6.42229122,3.21114561 a 1,1 90 0 1 0,1.78885438 L -0.21114562,4.1055728 A 1.236068,1.236068 31.717474 0 1 -2,3 v -6 a 1.236068,1.236068 148.28253 0 1 1.78885438,-1.1055728 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path8-9" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="RoundedArrow-3-2"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Rounded arrow"
+       markerWidth="0.5"
+       markerHeight="0.5"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid"
+       markerUnits="strokeWidth">
+      <path
+         transform="scale(0.7)"
+         d="m -0.21114562,-4.1055728 6.42229122,3.21114561 a 1,1 90 0 1 0,1.78885438 L -0.21114562,4.1055728 A 1.236068,1.236068 31.717474 0 1 -2,3 v -6 a 1.236068,1.236068 148.28253 0 1 1.78885438,-1.1055728 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path8-0-2" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.8286px;font-family:'Lucida Sans Unicode';-inkscape-font-specification:'Lucida Sans Unicode, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.06523;stroke-linejoin:round;stroke-opacity:1"
+       x="470.56812"
+       y="258.03027"
+       id="text7"><tspan
+         sodipodi:role="line"
+         id="tspan7"
+         x="470.56812"
+         y="258.03027"
+         style="stroke-width:3.06523;stroke:none;stroke-opacity:1;fill:#ffffff;fill-opacity:1">Switch Character</tspan></text>
+    <g
+       id="g6"
+       transform="matrix(0.64813562,0,0,0.64813562,-144.46482,135.82094)"
+       style="display:inline;stroke:#ffffff;stroke-opacity:1;fill:none;fill-opacity:1"
+       inkscape:label="p1">
+      <rect
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:6.04724;stroke-linejoin:round;stroke-opacity:1"
+         id="rect1"
+         width="147.10301"
+         height="147.10301"
+         x="305.2532"
+         y="352.5488"
+         ry="14.318925" />
+      <rect
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:6.04724;stroke-linejoin:round;stroke-opacity:1"
+         id="rect1-1"
+         width="147.10301"
+         height="147.10301"
+         x="480.69064"
+         y="352.5488"
+         ry="14.318925" />
+      <rect
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:6.04724;stroke-linejoin:round;stroke-opacity:1"
+         id="rect1-3"
+         width="147.10301"
+         height="147.10301"
+         x="656.12811"
+         y="352.5488"
+         ry="14.318925" />
+      <rect
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:6.04724;stroke-linejoin:round;stroke-opacity:1"
+         id="rect1-9"
+         width="147.10301"
+         height="147.10301"
+         x="427.63382"
+         y="183.36925"
+         ry="14.318925" />
+      <rect
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:6.04724;stroke-linejoin:round;stroke-opacity:1"
+         id="rect1-35"
+         width="147.10301"
+         height="147.10301"
+         x="599.7583"
+         y="183.36925"
+         ry="14.318925" />
+      <text
+         xml:space="preserve"
+         id="text1"
+         style="font-size:43.0646px;font-family:Impostograph;-inkscape-font-specification:'Impostograph, Normal';white-space:pre;shape-inside:url(#rect2);fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:6.04724;stroke-linejoin:round;stroke-opacity:1"
+         transform="matrix(1.7484872,0,0,1.7484872,-338.68535,7.7495642)"><tspan
+           x="461.93164"
+           y="158.06718"
+           id="tspan2"><tspan
+             style="font-family:'Lucida Sans Unicode';-inkscape-font-specification:'Lucida Sans Unicode, Normal'"
+             id="tspan1">W</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:76.3569px;font-family:'Lucida Sans Unicode';-inkscape-font-specification:'Lucida Sans Unicode, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:10.7222;stroke-linejoin:round;stroke-opacity:1"
+         x="352.57565"
+         y="453.65933"
+         id="text3"><tspan
+           sodipodi:role="line"
+           id="tspan3"
+           x="352.57565"
+           y="453.65933"
+           style="stroke-width:10.7222;stroke:none;stroke-opacity:1;fill:#ffffff;fill-opacity:1">A</tspan></text>
+      <text
+         xml:space="preserve"
+         id="text4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:43.0646px;font-family:'Lucida Sans Unicode';-inkscape-font-specification:'Lucida Sans Unicode, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect4);fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:6.04724;stroke-linejoin:round;stroke-opacity:1"
+         transform="matrix(1.7362653,0,0,1.7362653,-343.08066,-128.7504)"><tspan
+           x="505.23633"
+           y="335.10829"
+           id="tspan4">S</tspan></text>
+      <text
+         xml:space="preserve"
+         id="text5"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:43.0646px;font-family:'Lucida Sans Unicode';-inkscape-font-specification:'Lucida Sans Unicode, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect5);fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:6.04724;stroke-linejoin:round;stroke-opacity:1"
+         transform="matrix(1.6681474,0,0,1.6681474,-430.52333,-117.30514)"><tspan
+           x="678.46094"
+           y="341.29579"
+           id="tspan5">D</tspan></text>
+      <text
+         xml:space="preserve"
+         id="text6"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:43.0646px;font-family:'Lucida Sans Unicode';-inkscape-font-specification:'Lucida Sans Unicode, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect6);fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:6.04724;stroke-linejoin:round;stroke-opacity:1"
+         transform="matrix(1.7509906,0,0,1.7509906,-472.72249,5.5219502)"><tspan
+           x="641.3418"
+           y="159.13564"
+           id="tspan6">E</tspan></text>
+      <rect
+         style="display:inline;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:9.69892;stroke-linejoin:round;stroke-opacity:1"
+         id="rect7"
+         width="706.29663"
+         height="583.12354"
+         x="-566.21863"
+         y="26.079487"
+         ry="22.965534"
+         transform="matrix(0.96198428,0,0,0.96198428,783.03738,5.3366042)" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:69.0695px;font-family:'Lucida Sans Unicode';-inkscape-font-specification:'Lucida Sans Unicode, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:9.69892;stroke-linejoin:round;stroke-opacity:1"
+         x="-341.70053"
+         y="121.18785"
+         id="text11"
+         transform="matrix(0.96198428,0,0,0.96198428,783.03738,5.3366042)"><tspan
+           sodipodi:role="line"
+           id="tspan11"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:9.69893;stroke-opacity:1"
+           x="-341.70053"
+           y="121.18785">Player 1</tspan></text>
+    </g>
+    <g
+       id="g11"
+       inkscape:label="p2"
+       transform="matrix(0.62349625,0,0,0.62349625,451.03642,139.27978)"
+       style="stroke:#ffffff;stroke-opacity:1;fill:none;fill-opacity:1">
+      <rect
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:6.04724;stroke-linejoin:round;stroke-opacity:1"
+         id="rect1-0"
+         width="147.10301"
+         height="147.10301"
+         x="473.64182"
+         y="352.5488"
+         ry="14.318925" />
+      <rect
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:6.04724;stroke-linejoin:round;stroke-opacity:1"
+         id="rect1-1-2"
+         width="147.10301"
+         height="147.10301"
+         x="649.07922"
+         y="352.5488"
+         ry="14.318925" />
+      <rect
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:6.04724;stroke-linejoin:round;stroke-opacity:1"
+         id="rect1-3-7"
+         width="147.10301"
+         height="147.10301"
+         x="824.51672"
+         y="352.5488"
+         ry="14.318925" />
+      <rect
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:6.04724;stroke-linejoin:round;stroke-opacity:1"
+         id="rect1-9-2"
+         width="147.10301"
+         height="147.10301"
+         x="596.0224"
+         y="183.36925"
+         ry="14.318925" />
+      <rect
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:6.04724;stroke-linejoin:round;stroke-opacity:1"
+         id="rect1-35-0"
+         width="147.10301"
+         height="147.10301"
+         x="423.04199"
+         y="183.36925"
+         ry="14.318925" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:76.3569px;font-family:'Lucida Sans Unicode';-inkscape-font-specification:'Lucida Sans Unicode, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:10.7222;stroke-linejoin:round;stroke-opacity:1"
+         x="520.96423"
+         y="453.65933"
+         id="text3-7"><tspan
+           sodipodi:role="line"
+           id="tspan3-1"
+           x="520.96423"
+           y="453.65933"
+           style="stroke-width:10.7222;stroke:none;stroke-opacity:1;fill:#ffffff;fill-opacity:1">J</tspan></text>
+      <text
+         xml:space="preserve"
+         id="text4-4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:43.0646px;font-family:'Lucida Sans Unicode';-inkscape-font-specification:'Lucida Sans Unicode, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect4-5);fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:6.04724;stroke-linejoin:round;stroke-opacity:1"
+         transform="matrix(1.7362653,0,0,1.7362653,-174.69206,-128.7504)"><tspan
+           x="505.23633"
+           y="335.10829"
+           id="tspan8">K</tspan></text>
+      <text
+         xml:space="preserve"
+         id="text5-4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:43.0646px;font-family:'Lucida Sans Unicode';-inkscape-font-specification:'Lucida Sans Unicode, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect5-4);fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:6.04724;stroke-linejoin:round;stroke-opacity:1"
+         transform="matrix(1.6681474,0,0,1.6681474,-262.13473,-117.30514)"><tspan
+           x="678.46094"
+           y="341.29579"
+           id="tspan9">L</tspan></text>
+      <text
+         xml:space="preserve"
+         id="text6-5"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:43.0646px;font-family:'Lucida Sans Unicode';-inkscape-font-specification:'Lucida Sans Unicode, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect6-5);fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:6.04724;stroke-linejoin:round;stroke-opacity:1"
+         transform="matrix(1.7509906,0,0,1.7509906,-654.4,2.7657298)"><tspan
+           x="641.3418"
+           y="159.13564"
+           id="tspan10">U</tspan></text>
+      <text
+         xml:space="preserve"
+         id="text6-5-9"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:43.0646px;font-family:'Lucida Sans Unicode';-inkscape-font-specification:'Lucida Sans Unicode, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect6-5-0);fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:6.04724;stroke-linejoin:round;stroke-opacity:1"
+         transform="matrix(1.7509906,0,0,1.7509906,-466.63924,1.5664628)"><tspan
+           x="641.3418"
+           y="159.13564"
+           id="tspan13">I</tspan></text>
+      <rect
+         style="display:inline;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:9.69892;stroke-linejoin:round;stroke-opacity:1"
+         id="rect7-6"
+         width="706.29663"
+         height="583.12354"
+         x="353.40649"
+         y="26.039021"
+         ry="22.965534"
+         transform="translate(3.0825316e-5)" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:69.0695px;font-family:'Lucida Sans Unicode';-inkscape-font-specification:'Lucida Sans Unicode, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:9.69892;stroke-linejoin:round;stroke-opacity:1"
+         x="577.92462"
+         y="121.14738"
+         id="text11-0"
+         transform="translate(3.0825316e-5)"><tspan
+           sodipodi:role="line"
+           id="tspan11-0"
+           style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:9.69893;stroke-opacity:1"
+           x="577.92462"
+           y="121.14738">Player 2</tspan></text>
+    </g>
+    <path
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:4.21545;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#RoundedArrow);fill-opacity:1"
+       d="M 468.22829,247.85895 357.85244,274.31879"
+       id="path11"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:4.21545;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#RoundedArrow-3);fill-opacity:1"
+       d="m 650.94142,252.84088 49.13188,11.39188"
+       id="path11-3"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.8286px;font-family:'Lucida Sans Unicode';-inkscape-font-specification:'Lucida Sans Unicode, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.06523;stroke-linejoin:round;stroke-opacity:1"
+       x="523.24139"
+       y="346.63464"
+       id="text7-4"><tspan
+         sodipodi:role="line"
+         id="tspan7-2"
+         x="523.24139"
+         y="346.63464"
+         style="stroke-width:3.06523;stroke:none;stroke-opacity:1;fill:#ffffff;fill-opacity:1">Moment</tspan></text>
+    <path
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:4.21545;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#RoundedArrow-2);fill-opacity:1"
+       d="M 506.4376,342.40391 393.99956,372.64443"
+       id="path11-6"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:4.21545;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#RoundedArrow-3-2);fill-opacity:1"
+       d="m 618.06755,342.41738 111.34798,33.75079"
+       id="path11-3-2"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:43.0646px;font-family:'Lucida Sans Unicode';-inkscape-font-specification:'Lucida Sans Unicode, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:4.86047;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       x="524.9483"
+       y="390.79486"
+       id="text12"><tspan
+         sodipodi:role="line"
+         id="tspan12"
+         x="524.9483"
+         y="390.79486" /></text>
+  </g>
+</svg>

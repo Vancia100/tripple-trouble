@@ -6,7 +6,8 @@ export default function Player(props: {
   id: number,
   gridDimention: number,
   position: Vec2,
-  color: string
+  color: string,
+  outtlineColor: string
 }) {
   return (
   <svg
@@ -23,7 +24,7 @@ export default function Player(props: {
      id="layer1"
      transform="translate(-581.60489,-258.15988)">
     <circle
-       style={{fill: props.color, fillOpacity:1, stroke:"#4f4f4f", strokeWidth:22, strokeDasharray:0, strokeOpacity:1 }}
+       style={{fill: props.color, fillOpacity:1, stroke:props.outtlineColor, strokeWidth:22, strokeDasharray:0, strokeOpacity:1 }}
        id="path111"
        cx="865.31824"
        cy="541.87323"

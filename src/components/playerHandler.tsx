@@ -22,10 +22,14 @@ export default function PlayerHandler(props: {
     changePlayer(id: string) {
       switch (id) {
         case "1":
+          players![String(this.player1 + 1) as "1" | "2" | "3"].setOutlineColor("#494a4f")
           this.player1 = 3 - this.player1 - this.player2
+          players![String(this.player1 + 1) as "1" | "2" | "3"].setOutlineColor("#e31edc")
           break
           case "2":
+            players![String(this.player2 + 1) as "1" | "2" | "3"].setOutlineColor("#494a4f")
             this.player2 = 3 - this.player1 - this.player2
+            players![String(this.player2 + 1) as "1" | "2" | "3"].setOutlineColor("#dce31e")
             break
           }
     },
@@ -117,9 +121,9 @@ export default function PlayerHandler(props: {
 
   return (
     <>
-      <Player id={1} gridDimention={props.gridDimention} position={players!["1"].position} color="#e2330f"></Player>
-      <Player id={2} gridDimention={props.gridDimention} position={players!["2"].position} color="#0d1a93"></Player>
-      <Player id={3} gridDimention={props.gridDimention} position={players!["3"].position} color="#0ba80e"></Player>
+      <Player id={1} gridDimention={props.gridDimention} position={players!["1"].position} color="#e2330f" outtlineColor={players!["1"].outlineColor}></Player>
+      <Player id={2} gridDimention={props.gridDimention} position={players!["2"].position} color="#0d1a93" outtlineColor={players!["2"].outlineColor}></Player>
+      <Player id={3} gridDimention={props.gridDimention} position={players!["3"].position} color="#0ba80e" outtlineColor={players!["3"].outlineColor}></Player>
     </>
   )
 }
