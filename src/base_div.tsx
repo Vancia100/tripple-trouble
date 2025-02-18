@@ -55,7 +55,7 @@ export default function BaseDiv(props: { setPage: (page: string) => void }) {
   return (
     <PlayerProvider killFunction={() => setDeadState(true)} winFunction={() => {
       if (map === maps.length - 1) {
-        props.setPage("Menu")
+        props.setPage("Win")
       } else {
         setMap(prev => prev + 1)
       }}}>

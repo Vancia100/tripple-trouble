@@ -19,7 +19,7 @@ const Menu:PageCompontnt = props => { return(
     width: "max-content",
     fontSize: "1.5rem",
   }}>{"Click to play"}</button> 
-  <img src={controlls} alt="How 2 gaming" style={{
+  <img src={controlls} alt="How 2 gaming" id="Controlls-image" style={{
     maxWidth: "100%",
     paddingTop: "3rem"
   }}/></div>
